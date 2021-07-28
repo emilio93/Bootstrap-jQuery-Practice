@@ -8,6 +8,10 @@
     margin-top: -100px;
 }
 
+.logo {
+    max-height: 64px;
+}
+
 @media only screen and (max-width: 960px) {
     .img-crop-container>img {
         margin-top: 0;
