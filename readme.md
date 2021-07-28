@@ -9,5 +9,5 @@ To run a test, which only captures a screenshot of the website, execute:
 
 ```bash
 npm install # Install dependencies
-npm playwright test # execute tests
+npx playwright test # execute tests
 ```
