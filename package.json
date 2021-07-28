@@ -1,0 +1,28 @@
+{
+  "name": "bs-jquery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilio93/Bootstrap-jQuery-Practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilio93/Bootstrap-jQuery-Practice/issues"
+  },
+  "homepage": "https://github.com/emilio93/Bootstrap-jQuery-Practice#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.13.0",
+    "@types/node": "^16.4.5",
+    "playwright": "^1.13.0"
+  }
+}
