@@ -5,7 +5,8 @@ Source can be found in the `docs` directory and a live demo can be seen
 
 ## Tests
 
-To run a test, which only captures a screenshot of the website, execute:
+To run a test, which tests the login and logout functionality and returns
+screenshots of the website in each step, execute:
 
 ```bash
 npm install # Install dependencies
