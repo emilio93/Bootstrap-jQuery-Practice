@@ -6,13 +6,39 @@ $( document ).ready(function() {
         e.preventDefault();
         const email = $('#email');
         const password = $('#password');
-        if (email.val().trim() === '' || password.val().trim() === '') {
-            alert('Please enter your email and password.');
-            return;
+        let stop = false;
+        if (email.val().trim() === '') {
+            email.addClass('is-invalid');
+            if (!$('#email-invalid-feedback').length) {
+                jQuery('<div/>', {
+                    "id": 'email-invalid-feedback',
+                    "class": 'invalid-feedback',
+                    "html": 'Please enter an email'
+                }).insertAfter(email);
+            }
+            stop = true;
+        } else {
+            email.removeClass('is-invalid');
         }
+
+        if (password.val().trim() === '') {
+            password.addClass('is-invalid');
+            if (!$('#passowrd-invalid-feedback').length) {
+                jQuery('<div/>', {
+                    "id": 'passowrd-invalid-feedback',
+                    "class": 'invalid-feedback',
+                    "html": 'Please enter a password'
+                }).insertAfter(password);
+            }
+            stop = true;
+        } else {
+            password.removeClass('is-invalid');
+        }
+        if (stop) return;
+
         $('#login-panel').addClass('d-none');
         $('#welcome-panel').removeClass('d-none');
-        console.log(email.val(), password.val());
+
         email.val('');
         password.val('');
     });
