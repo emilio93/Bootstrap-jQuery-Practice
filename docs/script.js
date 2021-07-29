@@ -38,16 +38,20 @@ $( document ).ready(function() {
         }
         if (stop) return;
 
-        $('#login-panel').addClass('d-none');
-        $('#welcome-panel').removeClass('d-none');
 
-        email.val('');
-        password.val('');
+        $('#login-panel').fadeOut('fast', ()=>{
+            $('#welcome-panel').fadeIn('fast', () => {
+                email.val('');
+                password.val('');
+            });
+        });
+
     });
 
-    logoutButton.on('click', function(e) {
-        $('#login-panel').removeClass('d-none');
-        $('#welcome-panel').addClass('d-none');
+    logoutButton.on('click', function (e) {
+        $('#welcome-panel').fadeOut('fast', ()=>{
+            $('#login-panel').fadeIn('fast');
+        });
     });
 
 });
